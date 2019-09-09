@@ -1,0 +1,226 @@
+body {
+    background-color: black;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+
+#container {
+    height: 55vw;
+}
+
+.top {
+    display: grid;
+}
+
+#title {
+    color: white;
+    text-align: center;
+    font-size: 55px;
+    padding: 0;
+    margin: 0;
+}
+
+#level {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+#goals {
+    color: #d6d6d6;
+    text-align: center;
+    padding: 0;
+    margin: 0 0 8rem 0;
+    font-size: 12px;
+}
+
+.score {
+    text-align: center;
+}
+
+.circles {
+    position: relative;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+}
+
+circle {
+    stroke: black;
+    stroke-width: 3px;
+    fill: white;
+}
+
+.meter {
+    display: grid;
+}
+
+#power {
+    position: absolute;
+    height: 5vw;
+    background-color: #ddd;
+    padding: 0;
+    margin: 0;
+    width: 98%;
+}
+
+#box {
+    position: relative;
+    background-color: red;
+    opacity: .5;
+    width: 30%;
+    height: 5vw;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.popUps {
+    text-align: center;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+#btnStart, #btnNext, #btnLU, #btnRetry {
+    position: absolute;
+    width: 40%;
+    height: 5vw;
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    font-size: 2vw;
+    transform: translate(-50%, -50%);
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+
+#btnStop, #btnAgain {
+    position: absolute;
+    width: 40%;
+    height: 5vw;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    font-size: 2vw;
+    transform: translate(-50%, -50%);
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+
+
+#lives {
+    color: white;
+    text-align: right;
+    font-size: 2vw;
+    margin-right: 1rem;
+}
+
+meter::-webkit-meter-optimum-value {
+    animation: animate-stripes 5s linear infinite;
+    background: dodgerblue linear-gradient(
+            135deg,
+            transparent,
+            transparent 3%,
+            rgba(181, 43, 54, 0.1) 100%, transparent 66%);
+    background-size: 1vw 1vw;
+}
+
+meter::-webkit-meter-bar {
+    /* Let's animate this */
+    animation: animate-stripes 5s linear infinite;
+    background: #3333ff linear-gradient(
+            135deg,
+            transparent,
+            transparent 3%,
+            rgba(181, 43, 54, 0.1) 100%, transparent 66%);
+    background-size: 1vw 1vw;
+}
+
+
+#check, #redX {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.flash {
+    animation: flash 1s ease-in-out forwards;
+}
+
+#loser {
+    position: relative;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    opacity: 0;
+}
+
+.loseFlash {
+    animation: showLoserText 1s ease-in-out infinite;
+}
+
+#lvlUp {
+    position: relative;
+    color: white;
+    font-size: 35px;
+    visibility: hidden;
+    transform: translateX(-2000px);
+}
+
+.floatBy {
+    animation: leftToRight 2s ease-in-out forwards;
+}
+
+@keyframes animate-stripes {
+    to {
+        background-position: -50px 0;
+    }
+}
+
+@keyframes flash {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    50% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-2000px);
+        visibility: visible;
+    }
+    50% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(2000px);
+        visibility: hidden;
+    }
+}
+
+@keyframes showLoserText {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+

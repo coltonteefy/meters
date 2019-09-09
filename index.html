@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meters</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div class="top">
+            <h1 id="title">Meters</h1>
+            <h3 id="goals">Stop the meter between the blocked space</h3>
+            <h2 id="level">Level 1</h2>
+            <div class="score">
+                <svg class="circles">
+                    <circle id="circ1" cx="25" cy="25" r="20"></circle>
+                </svg>
+                <svg class="circles">
+                    <circle id="circ2" cx="25" cy="25" r="20"></circle>
+                </svg>
+                <svg class="circles">
+                    <circle id="circ3" cx="25" cy="25" r="20"></circle>
+                </svg>
+            </div>
+        </div>
+            
+        <div class="meter">
+            <meter id="power" value="0" max="100" min="0"></meter>
+            <div id="box"></div>
+            <h2 id="lives">Lives: 3</h2>
+        </div>
+
+        <div class="buttons">
+            <button id="btnStart" type="button" onclick="startPower();">Start</button>
+            <button id="btnStop" type="button" style="visibility: hidden" onclick="stopPower();">Stop</button>
+            <button id="btnNext" type="button" style="visibility: hidden" onclick="next();">Next</button>
+            <button id="btnAgain" type="button" style="visibility: hidden" onclick="next();">Again</button>
+            <button id="btnLU" type="button" style="visibility: hidden" onclick="">Next Level</button>
+            <button id="btnRetry" type="button" style="visibility: hidden" onclick="gameLost()">Retry</button>
+        </div>
+
+        <div class="popUps">
+            <div id="lvlUp">
+                <h2>Level Up</h2>
+            </div>
+            <div id="loser">
+                <h2>You Lose</h2>
+            </div>
+            <div id="check">
+                <img src="assets/check.png" alt="check">
+            </div>
+            <div id="redX">
+                <img src="assets/redX.png" alt="redX">
+            </div>
+        </div>
+    </div>
+    <audio autoplay loop src="assets/music.m4a">
+            <p>If you are reading this, it is because your browser does not support the audio element.</p>
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
