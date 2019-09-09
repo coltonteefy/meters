@@ -98,6 +98,7 @@ img {
     transform: translate(-50%, -50%);
     font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
+    touch-action: manipulation;
 }
 
 #btnStop, #btnAgain {
@@ -111,6 +112,7 @@ img {
     transform: translate(-50%, -50%);
     font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
+    touch-action: manipulation;
 }
 
 
