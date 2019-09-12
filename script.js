@@ -27,6 +27,7 @@ window.onLoad = function () {
     rand = Math.floor(Math.random() * 69);
     box.style.left = rand + '%';
     clearInterval(goPower);
+    let context = new AudioContext();
 };
 
 //determines if meter is inside or outside of the goal lines

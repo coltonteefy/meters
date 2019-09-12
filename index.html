@@ -56,8 +56,12 @@
             </div>
         </div>
     </div>
-    <audio autoplay loop src="assets/music.m4a">
-            <p>If you are reading this, it is because your browser does not support the audio element.</p>
+
+
+    <iframe src="assets/music.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+    <audio id="audio" autoplay loop preload="auto">
+        <source src="assets/music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
     </audio>
     <script src="script.js"></script>
 </body>

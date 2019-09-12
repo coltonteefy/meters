@@ -226,3 +226,19 @@ meter::-webkit-meter-bar {
     }
 }
 
+@media screen and (max-width: 900px) {
+    #btnStart, #btnNext, #btnLU, #btnRetry {
+        width: 65%;
+        height: 70px;
+        font-size: 25px;
+        transform: translate(-50%);
+    }
+
+    #btnStop, #btnAgain {
+        width: 65%;
+        height: 70px;
+        font-size: 24px;
+        transform: translate(-50%);
+    }
+}
+
